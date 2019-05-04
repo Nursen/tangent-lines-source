@@ -1,0 +1,12 @@
+<div class="mdl-layout__header-row">
+  <span class="mdl-layout__title">
+    Tangent Lines
+  </span>
+  <div class="mdl-layout-spacer"></div>
+  <nav id="nav" class="mdl-navigation">
+  {{ range .Site.Menus.main }} 
+    {{ $text := print  .Name | safeHTML }}
+    <a class="mdl-navigation__link" href="{{ .URL }}">{{ $text }}</a>
+  {{ end }}
+  </nav>
+</div>

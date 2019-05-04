@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="mdl-grid tl-container">
+    <div class="mdl-cell mdl-cell--12-col">
+        <h1 class="mdl-typography--display-1">{{ .Title }}</h1>
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <div class = "mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </div>
+            <div class="mdl-card__actions">
+                {{ partial "date-and-tags.html" . }}
+            </div>
+        </div>
+      {{ end }}
+    </div>
+</div>
+{{ end }}

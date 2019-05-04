@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="mdl-grid mdl-grid--no-spacing">
+<div id="home-jumbotron" class="mdl-cell mdl-cell--10-col jumbotron text-center">
+  <h1>{{ .Site.Title }}</h1>
+  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+</div>
+<div class="mdl-cell-2 col mdl-card mdl-card--border">
+  <span class="mdl-layout-title mdl-js-ripple-effect">Hey There!</span>
+</div>
+</div>
+
+{{ end }}
