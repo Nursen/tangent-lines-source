@@ -7,9 +7,29 @@
   margin: 0 auto;
   padding: 0;
 }
+
+.tl-header{
+  background: url(//100.115.92.2:1313/img/header-bg-alt.jpg) no-repeat bottom;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+.tl-nav{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  background-color:rgba(0,0,0,0.65);
+  color: white;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+
 #nav a {
-  font-weight: bold;
   color: inherit;
+  font-size: x-large;
 }
 #nav-border {
   border-bottom: 1px solid #212529;
