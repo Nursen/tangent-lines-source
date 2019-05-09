@@ -6,8 +6,8 @@
   <i data-feather="tag"></i>
   {{ range . }}
   {{ $href := print (absURL "tags/") (urlize .) }}
-  <span class="mdl-chip">
-    <a class = "mdl-chip__text" href="{{ $href }}">{{ . }}</a>
-  </span>
+  <a class="mdl-chip" href="{{ $href }}">
+    <span class = "mdl-chip__text mdl-color-text--cyan-800">{{ . }}</span>
+  </a>
   {{ end }}
 {{ end }}

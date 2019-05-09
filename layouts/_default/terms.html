@@ -1,18 +1,20 @@
 {{ define "main" }}
+<style>
+.mdl-button { margin: 5px; } 
+</style>
 <div class="mdl-grid tl-container">
-  <div class="mdl-cell">
-    <h1>{{ .Title }}</h1>
-
+  <div class="mdl-cell--12-col">
     {{ $type := .Type }}
     {{ range $key, $value := .Data.Terms.ByCount }}
       {{ $name := .Name }}
       {{ $count := .Count }}
       {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
-      <p>
-        <a class="btn btn-outline-dark font-125" href="{{ .Permalink }}">
-          <span class="badge badge-dark">{{ $count }}</span> {{ $name }}
+      <span class="mdl-badge mdl-badge--overlap" data-badge="{{ $count }}">
+        <a href="{{ .Permalink }}" class="mdl-button mdl-button--colored
+        mdl-js-button mdl-button--raised">
+          {{ $name }}
         </a>
-      </p>
+      </span>
       {{ end }}
     {{ end }}
   </div>

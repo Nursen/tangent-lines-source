@@ -1,7 +1,10 @@
 {{ define "main" }}
 <div class="mdl-grid tl-blog-post">
-  <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-    <div class="mdl-card__title mdl-color--amber">
+  <div class="mdl-cell mdl-cell--2-col">
+    {{ partial "table-of-contents.html" . }}
+  </div>
+  <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--8-col">
+    <div class="mdl-card__title">
       <h1 class="mdl-card__title-text">{{ .Title }}</h1>
     </div>
     <div class="mdl-card__actions">
@@ -10,6 +13,9 @@
     <div class="mdl-card__supporting-text">
       {{ .Content }}
     </div>
+  </div>
+  <div class="mdl-cell mdl-cell--2-col">
+    {{ partial "sidebar.html" . }}
   </div>
 </div>
 {{ end }}
